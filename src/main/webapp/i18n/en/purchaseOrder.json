@@ -1,0 +1,29 @@
+{
+  "mobileCfApp": {
+    "purchaseOrder": {
+      "home": {
+        "title": "Purchase Orders",
+        "createLabel": "Create a new Purchase Order",
+        "createOrEditLabel": "Create or edit a Purchase Order",
+        "notFound": "No Purchase Orders found"
+      },
+      "created": "A new Purchase Order is created with identifier {{ param }}",
+      "updated": "A Purchase Order is updated with identifier {{ param }}",
+      "deleted": "A Purchase Order is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Purchase Order {{ id }}?"
+      },
+      "detail": {
+        "title": "Purchase Order"
+      },
+      "farmerName": "Farmer Name",
+      "flockNumber": "Flock Number",
+      "pONumber": "P O Number",
+      "itemName": "Item Name",
+      "itemID": "Item ID",
+      "quantity": "Quantity",
+      "supplierName": "Supplier Name",
+      "transpoterName": "Transpoter Name"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mrn">
+            <h2><span jhiTranslate="mobileCfApp.mrn.detail.title">Mrn</span> {{mrn.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mobileCfApp.mrn.vehicleNumber">Vehicle Number</span></dt>
+                <dd>
+                    <span>{{mrn.vehicleNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.dCDate">D C Date</span></dt>
+                <dd>
+                    <span>{{mrn.dCDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.dCNumber">D C Number</span></dt>
+                <dd>
+                    <span>{{mrn.dCNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.postingDate">Posting Date</span></dt>
+                <dd>
+                    <span>{{mrn.postingDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.pONumber">P O Number</span></dt>
+                <dd>
+                    <span>{{mrn.pONumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.itemNumber">Item Number</span></dt>
+                <dd>
+                    <span>{{mrn.itemNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.avgWeight">Avg Weight</span></dt>
+                <dd>
+                    <span>{{mrn.avgWeight}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.condition">Condition</span></dt>
+                <dd>
+                    <span>{{mrn.condition}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{mrn.createdBy}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.itemRecieved">Item Recieved</span></dt>
+                <dd>
+                    <span>{{mrn.itemRecieved}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.mrn.flockNumber">Flock Number</span></dt>
+                <dd>
+                    <span>{{mrn.flockNumber}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mrn', mrn.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

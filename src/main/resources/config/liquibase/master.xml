@@ -14,6 +14,11 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191004140433_added_entity_PurchaseOrder.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191004140434_added_entity_Mrn.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191004140435_added_entity_LineSupervisor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191004140436_added_entity_SAPMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191004140437_added_entity_DailyRecording.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

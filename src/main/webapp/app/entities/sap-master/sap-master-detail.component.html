@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sAPMaster">
+            <h2><span jhiTranslate="mobileCfApp.sAPMaster.detail.title">SAP Master</span> {{sAPMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mobileCfApp.sAPMaster.farmerName">Farmer Name</span></dt>
+                <dd>
+                    <span>{{sAPMaster.farmerName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.sAPMaster.farmerID">Farmer ID</span></dt>
+                <dd>
+                    <span>{{sAPMaster.farmerID}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.sAPMaster.branchCode">Branch Code</span></dt>
+                <dd>
+                    <span>{{sAPMaster.branchCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.sAPMaster.flockNumber">Flock Number</span></dt>
+                <dd>
+                    <span>{{sAPMaster.flockNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.sAPMaster.addressOfFarmer">Address Of Farmer</span></dt>
+                <dd>
+                    <span>{{sAPMaster.addressOfFarmer}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.sAPMaster.itemCode">Item Code</span></dt>
+                <dd>
+                    <span>{{sAPMaster.itemCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.sAPMaster.quantity">Quantity</span></dt>
+                <dd>
+                    <span>{{sAPMaster.quantity}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.sAPMaster.pONumber">P O Number</span></dt>
+                <dd>
+                    <span>{{sAPMaster.pONumber}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sap-master', sAPMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

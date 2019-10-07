@@ -1,0 +1,71 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="mobileCfApp.sAPMaster.home.title">SAP Masters</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-sap-master" [routerLink]="['/sap-master/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="mobileCfApp.sAPMaster.home.createLabel">
+            Create a new SAP Master
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="sAPMasters?.length === 0">
+        <span jhiTranslate="mobileCfApp.sAPMaster.home.notFound">No sAPMasters found</span>
+    </div>
+    <div class="table-responsive" *ngIf="sAPMasters?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="mobileCfApp.sAPMaster.farmerName">Farmer Name</span></th>
+            <th><span jhiTranslate="mobileCfApp.sAPMaster.farmerID">Farmer ID</span></th>
+            <th><span jhiTranslate="mobileCfApp.sAPMaster.branchCode">Branch Code</span></th>
+            <th><span jhiTranslate="mobileCfApp.sAPMaster.flockNumber">Flock Number</span></th>
+            <th><span jhiTranslate="mobileCfApp.sAPMaster.addressOfFarmer">Address Of Farmer</span></th>
+            <th><span jhiTranslate="mobileCfApp.sAPMaster.itemCode">Item Code</span></th>
+            <th><span jhiTranslate="mobileCfApp.sAPMaster.quantity">Quantity</span></th>
+            <th><span jhiTranslate="mobileCfApp.sAPMaster.pONumber">P O Number</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let sAPMaster of sAPMasters ;trackBy: trackId">
+                <td><a [routerLink]="['/sap-master', sAPMaster.id, 'view' ]">{{sAPMaster.id}}</a></td>
+                <td>{{sAPMaster.farmerName}}</td>
+                <td>{{sAPMaster.farmerID}}</td>
+                <td>{{sAPMaster.branchCode}}</td>
+                <td>{{sAPMaster.flockNumber}}</td>
+                <td>{{sAPMaster.addressOfFarmer}}</td>
+                <td>{{sAPMaster.itemCode}}</td>
+                <td>{{sAPMaster.quantity}}</td>
+                <td>{{sAPMaster.pONumber}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/sap-master', sAPMaster.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sap-master', sAPMaster.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sap-master', { outlets: { popup: sAPMaster.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

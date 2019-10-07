@@ -1,0 +1,87 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-mrn-heading" jhiTranslate="mobileCfApp.mrn.home.createOrEditLabel">Create or edit a Mrn</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.vehicleNumber" for="field_vehicleNumber">Vehicle Number</label>
+                    <input type="text" class="form-control" name="vehicleNumber" id="field_vehicleNumber"
+                           formControlName="vehicleNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.dCDate" for="field_dCDate">D C Date</label>
+                    <div class="input-group">
+                        <input id="field_dCDate" type="text" class="form-control" name="dCDate" ngbDatepicker  #dCDateDp="ngbDatepicker" formControlName="dCDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dCDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.dCNumber" for="field_dCNumber">D C Number</label>
+                    <input type="text" class="form-control" name="dCNumber" id="field_dCNumber"
+                           formControlName="dCNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.postingDate" for="field_postingDate">Posting Date</label>
+                    <div class="input-group">
+                        <input id="field_postingDate" type="text" class="form-control" name="postingDate" ngbDatepicker  #postingDateDp="ngbDatepicker" formControlName="postingDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="postingDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.pONumber" for="field_pONumber">P O Number</label>
+                    <input type="text" class="form-control" name="pONumber" id="field_pONumber"
+                           formControlName="pONumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.itemNumber" for="field_itemNumber">Item Number</label>
+                    <input type="text" class="form-control" name="itemNumber" id="field_itemNumber"
+                           formControlName="itemNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.avgWeight" for="field_avgWeight">Avg Weight</label>
+                    <input type="text" class="form-control" name="avgWeight" id="field_avgWeight"
+                           formControlName="avgWeight"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.condition" for="field_condition">Condition</label>
+                    <input type="text" class="form-control" name="condition" id="field_condition"
+                           formControlName="condition"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.createdBy" for="field_createdBy">Created By</label>
+                    <input type="number" class="form-control" name="createdBy" id="field_createdBy"
+                           formControlName="createdBy"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.itemRecieved" for="field_itemRecieved">Item Recieved</label>
+                    <input type="number" class="form-control" name="itemRecieved" id="field_itemRecieved"
+                           formControlName="itemRecieved"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.mrn.flockNumber" for="field_flockNumber">Flock Number</label>
+                    <input type="text" class="form-control" name="flockNumber" id="field_flockNumber"
+                           formControlName="flockNumber"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

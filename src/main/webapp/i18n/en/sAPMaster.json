@@ -1,0 +1,29 @@
+{
+  "mobileCfApp": {
+    "sAPMaster": {
+      "home": {
+        "title": "SAP Masters",
+        "createLabel": "Create a new SAP Master",
+        "createOrEditLabel": "Create or edit a SAP Master",
+        "notFound": "No SAP Masters found"
+      },
+      "created": "A new SAP Master is created with identifier {{ param }}",
+      "updated": "A SAP Master is updated with identifier {{ param }}",
+      "deleted": "A SAP Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete SAP Master {{ id }}?"
+      },
+      "detail": {
+        "title": "SAP Master"
+      },
+      "farmerName": "Farmer Name",
+      "farmerID": "Farmer ID",
+      "branchCode": "Branch Code",
+      "flockNumber": "Flock Number",
+      "addressOfFarmer": "Address Of Farmer",
+      "itemCode": "Item Code",
+      "quantity": "Quantity",
+      "pONumber": "P O Number"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-sap-master-heading" jhiTranslate="mobileCfApp.sAPMaster.home.createOrEditLabel">Create or edit a SAP Master</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.sAPMaster.farmerName" for="field_farmerName">Farmer Name</label>
+                    <input type="text" class="form-control" name="farmerName" id="field_farmerName"
+                           formControlName="farmerName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.sAPMaster.farmerID" for="field_farmerID">Farmer ID</label>
+                    <input type="text" class="form-control" name="farmerID" id="field_farmerID"
+                           formControlName="farmerID"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.sAPMaster.branchCode" for="field_branchCode">Branch Code</label>
+                    <input type="text" class="form-control" name="branchCode" id="field_branchCode"
+                           formControlName="branchCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.sAPMaster.flockNumber" for="field_flockNumber">Flock Number</label>
+                    <input type="text" class="form-control" name="flockNumber" id="field_flockNumber"
+                           formControlName="flockNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.sAPMaster.addressOfFarmer" for="field_addressOfFarmer">Address Of Farmer</label>
+                    <input type="text" class="form-control" name="addressOfFarmer" id="field_addressOfFarmer"
+                           formControlName="addressOfFarmer"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.sAPMaster.itemCode" for="field_itemCode">Item Code</label>
+                    <input type="text" class="form-control" name="itemCode" id="field_itemCode"
+                           formControlName="itemCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.sAPMaster.quantity" for="field_quantity">Quantity</label>
+                    <input type="text" class="form-control" name="quantity" id="field_quantity"
+                           formControlName="quantity"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.sAPMaster.pONumber" for="field_pONumber">P O Number</label>
+                    <input type="text" class="form-control" name="pONumber" id="field_pONumber"
+                           formControlName="pONumber"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

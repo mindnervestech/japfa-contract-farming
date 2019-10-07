@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="purchaseOrder">
+            <h2><span jhiTranslate="mobileCfApp.purchaseOrder.detail.title">Purchase Order</span> {{purchaseOrder.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mobileCfApp.purchaseOrder.farmerName">Farmer Name</span></dt>
+                <dd>
+                    <span>{{purchaseOrder.farmerName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.purchaseOrder.flockNumber">Flock Number</span></dt>
+                <dd>
+                    <span>{{purchaseOrder.flockNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.purchaseOrder.pONumber">P O Number</span></dt>
+                <dd>
+                    <span>{{purchaseOrder.pONumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.purchaseOrder.itemName">Item Name</span></dt>
+                <dd>
+                    <span>{{purchaseOrder.itemName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.purchaseOrder.itemID">Item ID</span></dt>
+                <dd>
+                    <span>{{purchaseOrder.itemID}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.purchaseOrder.quantity">Quantity</span></dt>
+                <dd>
+                    <span>{{purchaseOrder.quantity}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.purchaseOrder.supplierName">Supplier Name</span></dt>
+                <dd>
+                    <span>{{purchaseOrder.supplierName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.purchaseOrder.transpoterName">Transpoter Name</span></dt>
+                <dd>
+                    <span>{{purchaseOrder.transpoterName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/purchase-order', purchaseOrder.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "mobileCfApp": {
+    "lineSupervisor": {
+      "home": {
+        "title": "Line Supervisors",
+        "createLabel": "Create a new Line Supervisor",
+        "createOrEditLabel": "Create or edit a Line Supervisor",
+        "notFound": "No Line Supervisors found"
+      },
+      "created": "A new Line Supervisor is created with identifier {{ param }}",
+      "updated": "A Line Supervisor is updated with identifier {{ param }}",
+      "deleted": "A Line Supervisor is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Line Supervisor {{ id }}?"
+      },
+      "detail": {
+        "title": "Line Supervisor"
+      },
+      "name": "Name",
+      "branchCode": "Branch Code"
+    }
+  }
+}
