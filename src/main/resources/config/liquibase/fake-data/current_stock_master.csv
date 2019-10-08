@@ -1,11 +1,11 @@
-id;flock_number;material_code;material_name;stock_in_hand
-1;Credit Card Account;navigate;Re-contextualized;80313
-2;Point Orchestrator;Solomon Islands Licensed;Gloves Bedfordshire Argentine Peso;85835
-3;neural-net red;Buckinghamshire Future-proofed deposit;Quality;39757
-4;Cambridgeshire hacking;bricks-and-clicks Concrete Global;Fiji Dollar Profound Bacon;98216
-5;Borders content-based;Tasty Customer Human;pink even-keeled;70035
-6;programming SCSI drive;invoice Unbranded Cheese;New Zealand Dollar Alabama transform;94013
-7;Supervisor clear-thinking;Latvia;Ports Manager Fish;1807
-8;Bedfordshire;navigate;program alarm;30806
-9;Benin Berkshire;dedicated Persevering;Coordinator Cambridgeshire Investor;43439
-10;dot-com payment Libyan Dinar;white sensor local;calculate;4360
+id,flock_number,material_code,material_name,stock_in_hand
+1,F01020000017,100793,DOC,4000
+2,F02130000006,100794,Pre-starter,4360
+3,F01590000019,100830,Starter,1807
+4,F01580000019,100831,Finisher,4323
+5,F01020000017,100794,Pre-starter,4323
+6,F01020000017,100830,Starter,1800
+7,F02130000006,100830,Starter,1807
+8,F02130000006,100831,Finisher,4323
+9,F01590000019,100793,DOC,3800
+10,F01590000019,100794,Pre-starter,4360
