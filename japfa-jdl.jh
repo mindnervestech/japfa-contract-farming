@@ -30,15 +30,27 @@ entity LineSupervisor {
 	BranchCode String
 }
 
-entity SAPMaster {
-	FarmerName String
+entity FarmerMaster {
+    FarmerName String
     FarmerID String
-	BranchCode String
+    FlockNumber String 
+    AddressOfFarmer String
+    LineSupervisorName String
+    LineSupervisorID String
+}
+
+entity CurrentStockMaster {
 	FlockNumber String
-	AddressOfFarmer String
-	ItemCode String
-	Quantity String
-	PONumber String
+	MaterialCode String
+    MaterialName String
+	StockInHand Integer
+}
+
+entity IssuedStockMaster {
+	FlockNumber String
+	MaterialCode String
+    MaterialName String
+	StockIssued Integer
 }
 
 /**
@@ -47,7 +59,9 @@ entity SAPMaster {
  */
 entity DailyRecording {
 	FlockNumber String
-	ItemCode String
+	MaterialCode String
+    ChiksSamplingWeight Integer
+    ChiksCondition String
 	Quantity String
     Comment String
     CreatedBy Integer

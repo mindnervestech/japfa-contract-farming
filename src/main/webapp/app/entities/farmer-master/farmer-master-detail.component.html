@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="farmerMaster">
+            <h2><span jhiTranslate="mobileCfApp.farmerMaster.detail.title">Farmer Master</span> {{farmerMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mobileCfApp.farmerMaster.farmerName">Farmer Name</span></dt>
+                <dd>
+                    <span>{{farmerMaster.farmerName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.farmerMaster.farmerID">Farmer ID</span></dt>
+                <dd>
+                    <span>{{farmerMaster.farmerID}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.farmerMaster.flockNumber">Flock Number</span></dt>
+                <dd>
+                    <span>{{farmerMaster.flockNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.farmerMaster.addressOfFarmer">Address Of Farmer</span></dt>
+                <dd>
+                    <span>{{farmerMaster.addressOfFarmer}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.farmerMaster.lineSupervisorName">Line Supervisor Name</span></dt>
+                <dd>
+                    <span>{{farmerMaster.lineSupervisorName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.farmerMaster.lineSupervisorID">Line Supervisor ID</span></dt>
+                <dd>
+                    <span>{{farmerMaster.lineSupervisorID}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/farmer-master', farmerMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

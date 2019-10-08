@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-current-stock-master-heading" jhiTranslate="mobileCfApp.currentStockMaster.home.createOrEditLabel">Create or edit a Current Stock Master</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.currentStockMaster.flockNumber" for="field_flockNumber">Flock Number</label>
+                    <input type="text" class="form-control" name="flockNumber" id="field_flockNumber"
+                           formControlName="flockNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.currentStockMaster.materialCode" for="field_materialCode">Material Code</label>
+                    <input type="text" class="form-control" name="materialCode" id="field_materialCode"
+                           formControlName="materialCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.currentStockMaster.materialName" for="field_materialName">Material Name</label>
+                    <input type="text" class="form-control" name="materialName" id="field_materialName"
+                           formControlName="materialName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mobileCfApp.currentStockMaster.stockInHand" for="field_stockInHand">Stock In Hand</label>
+                    <input type="number" class="form-control" name="stockInHand" id="field_stockInHand"
+                           formControlName="stockInHand"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

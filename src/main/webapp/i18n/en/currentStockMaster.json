@@ -1,0 +1,25 @@
+{
+  "mobileCfApp": {
+    "currentStockMaster": {
+      "home": {
+        "title": "Current Stock Masters",
+        "createLabel": "Create a new Current Stock Master",
+        "createOrEditLabel": "Create or edit a Current Stock Master",
+        "notFound": "No Current Stock Masters found"
+      },
+      "created": "A new Current Stock Master is created with identifier {{ param }}",
+      "updated": "A Current Stock Master is updated with identifier {{ param }}",
+      "deleted": "A Current Stock Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Current Stock Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Current Stock Master"
+      },
+      "flockNumber": "Flock Number",
+      "materialCode": "Material Code",
+      "materialName": "Material Name",
+      "stockInHand": "Stock In Hand"
+    }
+  }
+}

@@ -12,6 +12,9 @@
         "lineSupervisor": "Line Supervisor",
         "sapMaster": "SAP Master",
         "dailyRecording": "Daily Recording",
+        "farmerMaster": "Farmer Master",
+        "currentStockMaster": "Current Stock Master",
+        "issuedStockMaster": "Issued Stock Master",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

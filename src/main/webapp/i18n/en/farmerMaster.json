@@ -1,0 +1,27 @@
+{
+  "mobileCfApp": {
+    "farmerMaster": {
+      "home": {
+        "title": "Farmer Masters",
+        "createLabel": "Create a new Farmer Master",
+        "createOrEditLabel": "Create or edit a Farmer Master",
+        "notFound": "No Farmer Masters found"
+      },
+      "created": "A new Farmer Master is created with identifier {{ param }}",
+      "updated": "A Farmer Master is updated with identifier {{ param }}",
+      "deleted": "A Farmer Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Farmer Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Farmer Master"
+      },
+      "farmerName": "Farmer Name",
+      "farmerID": "Farmer ID",
+      "flockNumber": "Flock Number",
+      "addressOfFarmer": "Address Of Farmer",
+      "lineSupervisorName": "Line Supervisor Name",
+      "lineSupervisorID": "Line Supervisor ID"
+    }
+  }
+}

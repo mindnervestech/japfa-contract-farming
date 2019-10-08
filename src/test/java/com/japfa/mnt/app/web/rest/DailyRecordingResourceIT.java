@@ -38,8 +38,15 @@ public class DailyRecordingResourceIT {
     private static final String DEFAULT_FLOCK_NUMBER = "AAAAAAAAAA";
     private static final String UPDATED_FLOCK_NUMBER = "BBBBBBBBBB";
 
-    private static final String DEFAULT_ITEM_CODE = "AAAAAAAAAA";
-    private static final String UPDATED_ITEM_CODE = "BBBBBBBBBB";
+    private static final String DEFAULT_MATERIAL_CODE = "AAAAAAAAAA";
+    private static final String UPDATED_MATERIAL_CODE = "BBBBBBBBBB";
+
+    private static final Integer DEFAULT_CHIKS_SAMPLING_WEIGHT = 1;
+    private static final Integer UPDATED_CHIKS_SAMPLING_WEIGHT = 2;
+    private static final Integer SMALLER_CHIKS_SAMPLING_WEIGHT = 1 - 1;
+
+    private static final String DEFAULT_CHIKS_CONDITION = "AAAAAAAAAA";
+    private static final String UPDATED_CHIKS_CONDITION = "BBBBBBBBBB";
 
     private static final String DEFAULT_QUANTITY = "AAAAAAAAAA";
     private static final String UPDATED_QUANTITY = "BBBBBBBBBB";
@@ -98,7 +105,9 @@ public class DailyRecordingResourceIT {
     public static DailyRecording createEntity(EntityManager em) {
         DailyRecording dailyRecording = new DailyRecording()
             .flockNumber(DEFAULT_FLOCK_NUMBER)
-            .itemCode(DEFAULT_ITEM_CODE)
+            .materialCode(DEFAULT_MATERIAL_CODE)
+            .chiksSamplingWeight(DEFAULT_CHIKS_SAMPLING_WEIGHT)
+            .chiksCondition(DEFAULT_CHIKS_CONDITION)
             .quantity(DEFAULT_QUANTITY)
             .comment(DEFAULT_COMMENT)
             .createdBy(DEFAULT_CREATED_BY)
@@ -114,7 +123,9 @@ public class DailyRecordingResourceIT {
     public static DailyRecording createUpdatedEntity(EntityManager em) {
         DailyRecording dailyRecording = new DailyRecording()
             .flockNumber(UPDATED_FLOCK_NUMBER)
-            .itemCode(UPDATED_ITEM_CODE)
+            .materialCode(UPDATED_MATERIAL_CODE)
+            .chiksSamplingWeight(UPDATED_CHIKS_SAMPLING_WEIGHT)
+            .chiksCondition(UPDATED_CHIKS_CONDITION)
             .quantity(UPDATED_QUANTITY)
             .comment(UPDATED_COMMENT)
             .createdBy(UPDATED_CREATED_BY)
@@ -143,7 +154,9 @@ public class DailyRecordingResourceIT {
         assertThat(dailyRecordingList).hasSize(databaseSizeBeforeCreate + 1);
         DailyRecording testDailyRecording = dailyRecordingList.get(dailyRecordingList.size() - 1);
         assertThat(testDailyRecording.getFlockNumber()).isEqualTo(DEFAULT_FLOCK_NUMBER);
-        assertThat(testDailyRecording.getItemCode()).isEqualTo(DEFAULT_ITEM_CODE);
+        assertThat(testDailyRecording.getMaterialCode()).isEqualTo(DEFAULT_MATERIAL_CODE);
+        assertThat(testDailyRecording.getChiksSamplingWeight()).isEqualTo(DEFAULT_CHIKS_SAMPLING_WEIGHT);
+        assertThat(testDailyRecording.getChiksCondition()).isEqualTo(DEFAULT_CHIKS_CONDITION);
         assertThat(testDailyRecording.getQuantity()).isEqualTo(DEFAULT_QUANTITY);
         assertThat(testDailyRecording.getComment()).isEqualTo(DEFAULT_COMMENT);
         assertThat(testDailyRecording.getCreatedBy()).isEqualTo(DEFAULT_CREATED_BY);
@@ -182,7 +195,9 @@ public class DailyRecordingResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(dailyRecording.getId().intValue())))
             .andExpect(jsonPath("$.[*].flockNumber").value(hasItem(DEFAULT_FLOCK_NUMBER.toString())))
-            .andExpect(jsonPath("$.[*].itemCode").value(hasItem(DEFAULT_ITEM_CODE.toString())))
+            .andExpect(jsonPath("$.[*].materialCode").value(hasItem(DEFAULT_MATERIAL_CODE.toString())))
+            .andExpect(jsonPath("$.[*].chiksSamplingWeight").value(hasItem(DEFAULT_CHIKS_SAMPLING_WEIGHT)))
+            .andExpect(jsonPath("$.[*].chiksCondition").value(hasItem(DEFAULT_CHIKS_CONDITION.toString())))
             .andExpect(jsonPath("$.[*].quantity").value(hasItem(DEFAULT_QUANTITY.toString())))
             .andExpect(jsonPath("$.[*].comment").value(hasItem(DEFAULT_COMMENT.toString())))
             .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY)))
@@ -201,7 +216,9 @@ public class DailyRecordingResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(dailyRecording.getId().intValue()))
             .andExpect(jsonPath("$.flockNumber").value(DEFAULT_FLOCK_NUMBER.toString()))
-            .andExpect(jsonPath("$.itemCode").value(DEFAULT_ITEM_CODE.toString()))
+            .andExpect(jsonPath("$.materialCode").value(DEFAULT_MATERIAL_CODE.toString()))
+            .andExpect(jsonPath("$.chiksSamplingWeight").value(DEFAULT_CHIKS_SAMPLING_WEIGHT))
+            .andExpect(jsonPath("$.chiksCondition").value(DEFAULT_CHIKS_CONDITION.toString()))
             .andExpect(jsonPath("$.quantity").value(DEFAULT_QUANTITY.toString()))
             .andExpect(jsonPath("$.comment").value(DEFAULT_COMMENT.toString()))
             .andExpect(jsonPath("$.createdBy").value(DEFAULT_CREATED_BY))
@@ -230,7 +247,9 @@ public class DailyRecordingResourceIT {
         em.detach(updatedDailyRecording);
         updatedDailyRecording
             .flockNumber(UPDATED_FLOCK_NUMBER)
-            .itemCode(UPDATED_ITEM_CODE)
+            .materialCode(UPDATED_MATERIAL_CODE)
+            .chiksSamplingWeight(UPDATED_CHIKS_SAMPLING_WEIGHT)
+            .chiksCondition(UPDATED_CHIKS_CONDITION)
             .quantity(UPDATED_QUANTITY)
             .comment(UPDATED_COMMENT)
             .createdBy(UPDATED_CREATED_BY)
@@ -246,7 +265,9 @@ public class DailyRecordingResourceIT {
         assertThat(dailyRecordingList).hasSize(databaseSizeBeforeUpdate);
         DailyRecording testDailyRecording = dailyRecordingList.get(dailyRecordingList.size() - 1);
         assertThat(testDailyRecording.getFlockNumber()).isEqualTo(UPDATED_FLOCK_NUMBER);
-        assertThat(testDailyRecording.getItemCode()).isEqualTo(UPDATED_ITEM_CODE);
+        assertThat(testDailyRecording.getMaterialCode()).isEqualTo(UPDATED_MATERIAL_CODE);
+        assertThat(testDailyRecording.getChiksSamplingWeight()).isEqualTo(UPDATED_CHIKS_SAMPLING_WEIGHT);
+        assertThat(testDailyRecording.getChiksCondition()).isEqualTo(UPDATED_CHIKS_CONDITION);
         assertThat(testDailyRecording.getQuantity()).isEqualTo(UPDATED_QUANTITY);
         assertThat(testDailyRecording.getComment()).isEqualTo(UPDATED_COMMENT);
         assertThat(testDailyRecording.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);

@@ -24,7 +24,7 @@ describe('Service Tests', () => {
       httpMock = injector.get(HttpTestingController);
       currentDate = moment();
 
-      elemDefault = new DailyRecording(0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 0, currentDate);
+      elemDefault = new DailyRecording(0, 'AAAAAAA', 'AAAAAAA', 0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 0, currentDate);
     });
 
     describe('Service methods', () => {
@@ -72,7 +72,9 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             flockNumber: 'BBBBBB',
-            itemCode: 'BBBBBB',
+            materialCode: 'BBBBBB',
+            chiksSamplingWeight: 1,
+            chiksCondition: 'BBBBBB',
             quantity: 'BBBBBB',
             comment: 'BBBBBB',
             createdBy: 1,
@@ -100,7 +102,9 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             flockNumber: 'BBBBBB',
-            itemCode: 'BBBBBB',
+            materialCode: 'BBBBBB',
+            chiksSamplingWeight: 1,
+            chiksCondition: 'BBBBBB',
             quantity: 'BBBBBB',
             comment: 'BBBBBB',
             createdBy: 1,

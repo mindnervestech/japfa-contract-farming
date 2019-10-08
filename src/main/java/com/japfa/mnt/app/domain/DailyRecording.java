@@ -23,8 +23,14 @@ public class DailyRecording implements Serializable {
     @Column(name = "flock_number")
     private String flockNumber;
 
-    @Column(name = "item_code")
-    private String itemCode;
+    @Column(name = "material_code")
+    private String materialCode;
+
+    @Column(name = "chiks_sampling_weight")
+    private Integer chiksSamplingWeight;
+
+    @Column(name = "chiks_condition")
+    private String chiksCondition;
 
     @Column(name = "quantity")
     private String quantity;
@@ -60,17 +66,43 @@ public class DailyRecording implements Serializable {
         this.flockNumber = flockNumber;
     }
 
-    public String getItemCode() {
-        return itemCode;
+    public String getMaterialCode() {
+        return materialCode;
     }
 
-    public DailyRecording itemCode(String itemCode) {
-        this.itemCode = itemCode;
+    public DailyRecording materialCode(String materialCode) {
+        this.materialCode = materialCode;
         return this;
     }
 
-    public void setItemCode(String itemCode) {
-        this.itemCode = itemCode;
+    public void setMaterialCode(String materialCode) {
+        this.materialCode = materialCode;
+    }
+
+    public Integer getChiksSamplingWeight() {
+        return chiksSamplingWeight;
+    }
+
+    public DailyRecording chiksSamplingWeight(Integer chiksSamplingWeight) {
+        this.chiksSamplingWeight = chiksSamplingWeight;
+        return this;
+    }
+
+    public void setChiksSamplingWeight(Integer chiksSamplingWeight) {
+        this.chiksSamplingWeight = chiksSamplingWeight;
+    }
+
+    public String getChiksCondition() {
+        return chiksCondition;
+    }
+
+    public DailyRecording chiksCondition(String chiksCondition) {
+        this.chiksCondition = chiksCondition;
+        return this;
+    }
+
+    public void setChiksCondition(String chiksCondition) {
+        this.chiksCondition = chiksCondition;
     }
 
     public String getQuantity() {
@@ -147,7 +179,9 @@ public class DailyRecording implements Serializable {
         return "DailyRecording{" +
             "id=" + getId() +
             ", flockNumber='" + getFlockNumber() + "'" +
-            ", itemCode='" + getItemCode() + "'" +
+            ", materialCode='" + getMaterialCode() + "'" +
+            ", chiksSamplingWeight=" + getChiksSamplingWeight() +
+            ", chiksCondition='" + getChiksCondition() + "'" +
             ", quantity='" + getQuantity() + "'" +
             ", comment='" + getComment() + "'" +
             ", createdBy=" + getCreatedBy() +

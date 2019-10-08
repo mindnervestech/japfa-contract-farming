@@ -1,0 +1,25 @@
+{
+  "mobileCfApp": {
+    "issuedStockMaster": {
+      "home": {
+        "title": "Issued Stock Masters",
+        "createLabel": "Create a new Issued Stock Master",
+        "createOrEditLabel": "Create or edit a Issued Stock Master",
+        "notFound": "No Issued Stock Masters found"
+      },
+      "created": "A new Issued Stock Master is created with identifier {{ param }}",
+      "updated": "A Issued Stock Master is updated with identifier {{ param }}",
+      "deleted": "A Issued Stock Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Issued Stock Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Issued Stock Master"
+      },
+      "flockNumber": "Flock Number",
+      "materialCode": "Material Code",
+      "materialName": "Material Name",
+      "stockIssued": "Stock Issued"
+    }
+  }
+}

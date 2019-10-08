@@ -23,6 +23,18 @@ import { RouterModule } from '@angular/router';
       {
         path: 'daily-recording',
         loadChildren: () => import('./daily-recording/daily-recording.module').then(m => m.MobileCfDailyRecordingModule)
+      },
+      {
+        path: 'farmer-master',
+        loadChildren: () => import('./farmer-master/farmer-master.module').then(m => m.MobileCfFarmerMasterModule)
+      },
+      {
+        path: 'current-stock-master',
+        loadChildren: () => import('./current-stock-master/current-stock-master.module').then(m => m.MobileCfCurrentStockMasterModule)
+      },
+      {
+        path: 'issued-stock-master',
+        loadChildren: () => import('./issued-stock-master/issued-stock-master.module').then(m => m.MobileCfIssuedStockMasterModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])

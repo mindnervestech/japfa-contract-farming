@@ -3,7 +3,9 @@ import { Moment } from 'moment';
 export interface IDailyRecording {
   id?: number;
   flockNumber?: string;
-  itemCode?: string;
+  materialCode?: string;
+  chiksSamplingWeight?: number;
+  chiksCondition?: string;
   quantity?: string;
   comment?: string;
   createdBy?: number;
@@ -14,7 +16,9 @@ export class DailyRecording implements IDailyRecording {
   constructor(
     public id?: number,
     public flockNumber?: string,
-    public itemCode?: string,
+    public materialCode?: string,
+    public chiksSamplingWeight?: number,
+    public chiksCondition?: string,
     public quantity?: string,
     public comment?: string,
     public createdBy?: number,

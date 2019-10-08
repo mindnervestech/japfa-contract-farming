@@ -17,7 +17,9 @@
         "title": "Daily Recording"
       },
       "flockNumber": "Flock Number",
-      "itemCode": "Item Code",
+      "materialCode": "Material Code",
+      "chiksSamplingWeight": "Chiks Sampling Weight",
+      "chiksCondition": "Chiks Condition",
       "quantity": "Quantity",
       "comment": "Comment",
       "createdBy": "Created By",

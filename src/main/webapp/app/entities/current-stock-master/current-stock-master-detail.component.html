@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="currentStockMaster">
+            <h2><span jhiTranslate="mobileCfApp.currentStockMaster.detail.title">Current Stock Master</span> {{currentStockMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mobileCfApp.currentStockMaster.flockNumber">Flock Number</span></dt>
+                <dd>
+                    <span>{{currentStockMaster.flockNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.currentStockMaster.materialCode">Material Code</span></dt>
+                <dd>
+                    <span>{{currentStockMaster.materialCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.currentStockMaster.materialName">Material Name</span></dt>
+                <dd>
+                    <span>{{currentStockMaster.materialName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.currentStockMaster.stockInHand">Stock In Hand</span></dt>
+                <dd>
+                    <span>{{currentStockMaster.stockInHand}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/current-stock-master', currentStockMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

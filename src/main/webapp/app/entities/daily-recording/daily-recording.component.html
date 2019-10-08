@@ -19,7 +19,9 @@
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
             <th><span jhiTranslate="mobileCfApp.dailyRecording.flockNumber">Flock Number</span></th>
-            <th><span jhiTranslate="mobileCfApp.dailyRecording.itemCode">Item Code</span></th>
+            <th><span jhiTranslate="mobileCfApp.dailyRecording.materialCode">Material Code</span></th>
+            <th><span jhiTranslate="mobileCfApp.dailyRecording.chiksSamplingWeight">Chiks Sampling Weight</span></th>
+            <th><span jhiTranslate="mobileCfApp.dailyRecording.chiksCondition">Chiks Condition</span></th>
             <th><span jhiTranslate="mobileCfApp.dailyRecording.quantity">Quantity</span></th>
             <th><span jhiTranslate="mobileCfApp.dailyRecording.comment">Comment</span></th>
             <th><span jhiTranslate="mobileCfApp.dailyRecording.createdBy">Created By</span></th>
@@ -31,7 +33,9 @@
             <tr *ngFor="let dailyRecording of dailyRecordings ;trackBy: trackId">
                 <td><a [routerLink]="['/daily-recording', dailyRecording.id, 'view' ]">{{dailyRecording.id}}</a></td>
                 <td>{{dailyRecording.flockNumber}}</td>
-                <td>{{dailyRecording.itemCode}}</td>
+                <td>{{dailyRecording.materialCode}}</td>
+                <td>{{dailyRecording.chiksSamplingWeight}}</td>
+                <td>{{dailyRecording.chiksCondition}}</td>
                 <td>{{dailyRecording.quantity}}</td>
                 <td>{{dailyRecording.comment}}</td>
                 <td>{{dailyRecording.createdBy}}</td>

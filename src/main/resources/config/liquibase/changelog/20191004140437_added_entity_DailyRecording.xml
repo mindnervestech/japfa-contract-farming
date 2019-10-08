@@ -19,7 +19,13 @@
             <column name="flock_number" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="item_code" type="varchar(255)">
+            <column name="material_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="chiks_sampling_weight" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="chiks_condition" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="quantity" type="varchar(255)">
@@ -58,7 +64,9 @@
                   tableName="daily_recording">
             <column name="id" type="numeric"/>
             <column name="flock_number" type="string"/>
-            <column name="item_code" type="string"/>
+            <column name="material_code" type="string"/>
+            <column name="chiks_sampling_weight" type="numeric"/>
+            <column name="chiks_condition" type="string"/>
             <column name="quantity" type="string"/>
             <column name="comment" type="string"/>
             <column name="created_by" type="numeric"/>

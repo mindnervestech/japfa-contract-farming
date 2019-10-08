@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="issuedStockMaster">
+            <h2><span jhiTranslate="mobileCfApp.issuedStockMaster.detail.title">Issued Stock Master</span> {{issuedStockMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mobileCfApp.issuedStockMaster.flockNumber">Flock Number</span></dt>
+                <dd>
+                    <span>{{issuedStockMaster.flockNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.issuedStockMaster.materialCode">Material Code</span></dt>
+                <dd>
+                    <span>{{issuedStockMaster.materialCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.issuedStockMaster.materialName">Material Name</span></dt>
+                <dd>
+                    <span>{{issuedStockMaster.materialName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mobileCfApp.issuedStockMaster.stockIssued">Stock Issued</span></dt>
+                <dd>
+                    <span>{{issuedStockMaster.stockIssued}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/issued-stock-master', issuedStockMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
