@@ -1,7 +1,7 @@
-id,name,branch_code
-1,Akhay Kumar Anurudha Mohanta,Personal Loan Account HTTP
-2,Bambalawade Shivanand Ravikant,quantify multi-byte
-3,Bhimappa Shivaji Waddar,user-centric Infrastructure
-4,GANESWAR SATRUGHNA MOHANTA,Fantastic
-5,Pathan Suraj Dastgir,Direct
-6,Shivanand Basagauda Patil,
+id;name;branch_code
+1;Akhay Kumar Anurudha Mohanta;Personal Loan Account HTTP
+2;Bambalawade Shivanand Ravikant;quantify multi-byte
+3;Bhimappa Shivaji Waddar;user-centric Infrastructure
+4;GANESWAR SATRUGHNA MOHANTA;Fantastic
+5;Pathan Suraj Dastgir;Direct
+6;Shivanand Basagauda Patil;
